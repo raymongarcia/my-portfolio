@@ -167,16 +167,16 @@ export const companies = [
     img: "",
     nameImg: "https://raymongarcia.github.io/my-portfolio/cosmotech.png",
   },
-  // {
-  //   id: 4,
-  //   name: "stream",
-  //   img: "https://raymongarcia.github.io/my-portfolio/s.svg",
-  //   nameimg: "https://raymongarcia.github.io/my-portfolio/streamName.svg",
-  // },
+  {
+    id: 4,
+    name: "slickdigital",
+    img: "https://raymongarcia.github.io/my-portfolio/s.svg",
+    nameImg: "https://raymongarcia.github.io/my-portfolio/slick_devs_logo.jfif",
+  },
   // {
   //   id: 5,
   //   name: "docker.",
-  //   img: "https://raymongarcia.github.io/my-portfolio/dock.svg",
+  //   img: "https://raymongarcia.github.io/my-portfolio/dock.svg",s
   //   nameimg: "https://raymongarcia.github.io/my-portfolio/dockerName.svg",
   // },
 ];
