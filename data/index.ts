@@ -171,7 +171,7 @@ export const companies = [
     id: 4,
     name: "slickdigital",
     img: "https://raymongarcia.github.io/my-portfolio/s.svg",
-    nameImg: "https://raymongarcia.github.io/my-portfolio/slick_devs_logo.jfif",
+    nameImg: "https://raymongarcia.github.io/my-portfolio/slick_digital.png",
   },
   // {
   //   id: 5,
