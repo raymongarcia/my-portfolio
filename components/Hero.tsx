@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
 
           {/* Profile Image - Right Side */}
-          <div className="flex-shrink-0 z-10">
+          <div className="flex-shrink-0 z-10 hidden lg:block">
             <Image
               height={300}
               width={390}
