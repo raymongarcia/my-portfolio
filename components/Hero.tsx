@@ -4,10 +4,11 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
+import { getAssetUrl } from "@/lib/utils";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-20 pt-36 relative overflow-hidden">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -40,7 +41,15 @@ const Hero = () => {
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
-      <Image height={300} width={390} src="https://raymongarcia.github.io/my-portfolio/profilePic.png" alt="profilePic" className="absolute h-[600px] z-10 left-[1300px]"/>
+      
+      {/* Profile Picture - positioned within hero section */}
+      <Image 
+        height={300} 
+        width={390} 
+        src={getAssetUrl("profilePic.png")} 
+        alt="profilePic" 
+        className="absolute hidden md:block right-4 md:right-8 lg:right-12 xl:right-16 top-1/2 -translate-y-1/2 h-[250px] md:h-[350px] lg:h-[450px] xl:h-[600px] w-auto z-10 object-contain max-w-[35%] md:max-w-[30%] lg:max-w-[25%]"
+      />
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">

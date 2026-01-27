@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import Image from "next/image";
+import { getAssetUrl } from "@/lib/utils";
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
         <Image
           height={300}
           width={300}
-          src="https://raymongarcia.github.io/my-portfolio/footer-grid.svg"
+          src={getAssetUrl("footer-grid.svg")}
           alt="grid"
           className="w-full h-full opacity-50 "
         />
