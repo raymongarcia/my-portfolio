@@ -40,43 +40,50 @@ const Hero = () => {
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
-      
-      <Image 
-        height={300} 
-        width={390} 
-        src="https://raymongarcia.github.io/my-portfolio/profilePic.png" 
-        alt="profilePic" 
-        className="absolute h-[600px] z-10 left-[1300px]"
-      />
+
+
 
       <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+        <div className="max-w-[89vw] md:max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4">
+          {/* Text Content - Left Side */}
+          <div className="flex flex-col items-center lg:items-start justify-center flex-1">
+            <p className="uppercase tracking-widest text-xs text-center lg:text-left text-blue-100 max-w-80 z-20">
+              Dynamic Web Magic with Next.js
+            </p>
 
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 z-20">
-            Dynamic Web Magic with Next.js
-          </p>
-
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
-          <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl z-20"
-          />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl z-20">
-            Hi! I&apos;m Mon, a Next.js Developer based in Philippines.
-          </p>
-
-          <a href="#about" className="z-20">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
+            {/**
+             *  Link: https://ui.aceternity.com/components/text-generate-effect
+             *
+             *  change md:text-6xl, add more responsive code
+             */}
+            <TextGenerateEffect
+              words="Transforming Concepts into Seamless User Experiences"
+              className="text-center lg:text-left text-[40px] md:text-5xl lg:text-6xl z-20"
             />
-          </a>
+
+            <p className="text-center lg:text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl z-20">
+              Hi! I&apos;m Mon, a Next.js Developer based in Philippines.
+            </p>
+
+            <a href="#about" className="z-20">
+              <MagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
+
+          {/* Profile Image - Right Side */}
+          <div className="flex-shrink-0 z-10">
+            <Image
+              height={300}
+              width={390}
+              src="https://raymongarcia.github.io/my-portfolio/profilePic.png"
+              alt="profilePic"
+              className="h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] w-auto object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
