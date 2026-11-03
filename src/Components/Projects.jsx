@@ -5,6 +5,7 @@ const Projects = () => {
             title: "Mandarin Training",
             description: "A guided Mandarin learning experience with bite-sized lessons, practical phrases, and learner progress tracking.",
             image: "/projects/mandarin-training.png",
+            imagePosition: "left center",
             liveUrl: "https://mandarin-training.vercel.app",
             repoUrl: "https://github.com/raymongarcia/mandarin-training",
         },
@@ -37,10 +38,10 @@ const Projects = () => {
                     <p className="section-note">A selection of live projects, from learning tools to teacher workflows and celebration experiences.</p>
                 </div>
                 <div className="work-grid">
-                    {projects.map(({ type, title, description, image, liveUrl, repoUrl }, index) => (
+                    {projects.map(({ type, title, description, image, imagePosition, liveUrl, repoUrl }, index) => (
                         <article className="work-card" key={title}>
                             <div className="work-art">
-                                <img className="work-image" src={image} alt={`${title} website screenshot`} loading="lazy" />
+                                <img className="work-image" src={image} alt={`${title} website screenshot`} loading="lazy" style={{ objectPosition: imagePosition }} />
                             </div>
                             <div className="work-copy">
                                 <span className="work-type">{String(index + 1).padStart(2, "0")} / {type.split("/ ").slice(1).join("/ ")}</span>
