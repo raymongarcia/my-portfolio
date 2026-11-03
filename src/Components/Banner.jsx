@@ -1,42 +1,29 @@
-import { AiFillGithub } from "react-icons/ai";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FiTwitter } from "react-icons/fi";
 import profileImg from "../assets/profile.jpg";
 
 const Banner = () => {
-    
     return (
-        <div className="lg:px-56 px-10 lg:py-0 py-20 text-center gap-5 lg-text-start flex lg:flex-row flex-col-reverse justify-between lg:gap-28 items-center">
-            <div className="h-full lg:py-40 flex flex-col justify-center lg:items-start items-center text-white">
-                <h1 data-aos="fade-right" className="text-[52px] font-semibold mb-8 leading-normal">Welcome to <span className="text-fuchsia-500">My Website</span></h1>
-                <p data-aos="fade-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia asperiores dicta, saepe alias suscipit exercitationem sint. Ex earum maxime dolorum delectus corrupti ab. Quam accusantium facere reprehenderit earum doloribus!</p>
-                <div className="flex mt-8 gap-2">
-                    <div className="flex items-center justify-center">
-                        <div className="flex space-x-2">
-                            <a href="" className="text-fuchsia-600 hover:text-fuchsia-500 rounded-full glow p-2">
-                                <AiFillGithub className="text-[20px]" />
-                            </a>
-                        </div>
-                        <div className="flex space-x-2">
-                            <a href="" className="text-fuchsia-600 hover:text-fuchsia-500 rounded-full glow p-2">
-                                <FaLinkedin className="text-[20px]" />
-                            </a>
-                        </div>
-                        <div className="flex space-x-2">
-                            <a href="" className="text-fuchsia-600 hover:text-fuchsia-500 rounded-full glow p-2">
-                                <FiTwitter className="text-[20px]" />
-                            </a>
-                        </div>
-                        <div className="flex space-x-2">
-                            <a href="" className="text-fuchsia-600 hover:text-fuchsia-500 rounded-full glow p-2">
-                                <FaInstagram className="text-[20px]" />
-                            </a>
-                        </div>
+        <section id="Home" className="hero">
+            <img className="hero-photo" src={profileImg} alt="" aria-hidden="true" />
+            <div className="hero-shade" aria-hidden="true" />
+            <div className="container hero-grid">
+                <div className="hero-content">
+                    <p className="eyebrow">Raymon Garcia / Frontend developer</p>
+                    <h1>Digital<br />things with<br /><span>feeling.</span></h1>
+                </div>
+                <div className="hero-detail">
+                    <p className="hero-copy">
+                        I bring ideas to life through thoughtful interfaces, expressive visuals,
+                        and web experiences built to work in the real world.
+                    </p>
+                    <div className="hero-actions">
+                        <a className="button" href="#Projects">Explore selected work <span aria-hidden="true">↘</span></a>
+                        <a className="button button-secondary" href="#About">About me <span aria-hidden="true">↗</span></a>
                     </div>
+                    <div className="hero-index"><span>01 — 03</span><span>Selected projects</span></div>
                 </div>
             </div>
-            <img data-aos="fade-up" src={profileImg} width={290} height={290} className="rounded-full border-2 p-1 border-fuchsia-500 img_glow"/>
-        </div>
+            <a className="scroll-cue" href="#Projects"><span aria-hidden="true">↓</span> Scroll to explore</a>
+        </section>
     );
 };
 

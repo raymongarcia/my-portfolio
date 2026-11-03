@@ -1,16 +1,32 @@
-import React from 'react';
-
 const Services = () => {
+    const services = [
+        ["01", "UI engineering", "Responsive, accessible interfaces built with clean, maintainable code."],
+        ["02", "Web experiences", "Distinctive landing pages and websites designed around real people."],
+        ["03", "Design systems", "Reusable components and consistent patterns that scale with a product."],
+        ["04", "Interaction", "Thoughtful motion and details that make interfaces feel alive."],
+    ];
+
     return (
-        <div id="Services" className='p-20 flex flex-col items-center justify-center'>
-            <h1 data-aos="fade-right" className='text-[52px] font-semibold mb-20 leading-normal uppercase text-fuchsia-500'>Services</h1>
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-around gap-20'>
-                <h2 data-aos="fade-down"className='text-[26px] flex items-center justify-center font-semibold text-fuchsia-800 rounded-3xl h-36 w-44 border-2 boder-fuchsia-800 border_glow'>HTML5</h2>
-                <h2 data-aos="fade-up"className='text-[26px] flex items-center justify-center font-semibold text-fuchsia-800 rounded-3xl h-36 w-44 border-2 boder-fuchsia-800 border_glow'>CSS3</h2>
-                <h2 data-aos="fade-down"className='text-[26px] flex items-center justify-center font-semibold text-fuchsia-800 rounded-3xl h-36 w-44 border-2 boder-fuchsia-800 border_glow'>Javascript</h2>
-                <h2 data-aos="fade-up"className='text-[26px] flex items-center justify-center font-semibold text-fuchsia-800 rounded-3xl h-36 w-44 border-2 boder-fuchsia-800 border_glow'>React</h2>
+        <section id="Services" className="section services-section">
+            <div className="container">
+                <div className="section-heading">
+                    <div>
+                        <p className="eyebrow">02 / What I bring</p>
+                        <h2>Good ideas,<br /><span>built with intent.</span></h2>
+                    </div>
+                    <p className="section-note">From the first sketch to the final pixel, I make the web feel considered.</p>
+                </div>
+                <div className="services-grid">
+                    {services.map(([index, title, description]) => (
+                        <article className="service-card" key={index}>
+                            <span className="service-index">{index} / 04</span>
+                            <h3>{title}</h3>
+                            <p>{description}</p>
+                        </article>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
