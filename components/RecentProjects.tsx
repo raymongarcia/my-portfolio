@@ -19,8 +19,8 @@ const RecentProjects = () => {
               key={item.id}
             >
               <PinContainer
-                title="linkedin.com/in/john-raymon-macalib-og-39a12b206/"
-                href="https://www.linkedin.com/in/john-raymon-macalib-og-39a12b206/"
+                title={item.link}
+                href={item.link}
               >
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                   <div
