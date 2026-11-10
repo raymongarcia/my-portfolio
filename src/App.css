@@ -116,6 +116,7 @@
 }
 
 .hero-portrait {
+  position: relative;
   width: 100%;
   max-width: 650px;
   aspect-ratio: 551 / 706;

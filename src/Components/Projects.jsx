@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Projects = () => {
     const projects = [
         {
@@ -41,7 +43,14 @@ const Projects = () => {
                     {projects.map(({ type, title, description, image, imagePosition, liveUrl, repoUrl }, index) => (
                         <article className="work-card" key={title}>
                             <div className="work-art">
-                                <img className="work-image" src={image} alt={`${title} website screenshot`} loading="lazy" style={{ objectPosition: imagePosition }} />
+                                <Image
+                                    className="work-image"
+                                    src={image}
+                                    alt={`${title} website screenshot`}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    style={{ objectPosition: imagePosition }}
+                                />
                             </div>
                             <div className="work-copy">
                                 <span className="work-type">{String(index + 1).padStart(2, "0")} / {type.split("/ ").slice(1).join("/ ")}</span>

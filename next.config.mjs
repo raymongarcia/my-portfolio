@@ -1,4 +1,4 @@
-import {withSentryConfig} from '@sentry/nextjs';
+import sentryConfig from '@sentry/nextjs/config';
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 nextConfig.images = {
@@ -11,4 +11,4 @@ nextConfig.images = {
   ],
 };
 
-export default withSentryConfig(nextConfig);
+export default sentryConfig.withSentryConfig(nextConfig);

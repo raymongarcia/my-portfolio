@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Banner = () => {
     return (
         <section id="Home" className="hero">
@@ -18,7 +20,14 @@ const Banner = () => {
                     </div>
                 </div>
                 <figure className="hero-portrait">
-                    <img className="hero-photo" src="/hero-portrait-cutout.png" alt="Raymon Garcia" />
+                    <Image
+                        className="hero-photo"
+                        src="/hero-portrait-cutout.png"
+                        alt="Raymon Garcia"
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 350px, 50vw"
+                    />
                 </figure>
             </div>
             <a className="scroll-cue" href="#Projects"><span aria-hidden="true">↓</span> Scroll to explore</a>
