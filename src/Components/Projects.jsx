@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const Projects = () => {
     const projects = [
         {
@@ -45,7 +47,7 @@ const Projects = () => {
                             <div className="work-art">
                                 <Image
                                     className="work-image"
-                                    src={image}
+                                    src={`${basePath}${image}`}
                                     alt={`${title} website screenshot`}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"

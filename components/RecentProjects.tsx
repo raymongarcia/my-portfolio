@@ -4,6 +4,8 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const RecentProjects = () => {
   return (
     <section id="projects">
@@ -32,7 +34,7 @@ const RecentProjects = () => {
                   <Image
                     height={300}
                     width={300}
-                    src={item.img}
+                    src={`${basePath}${item.img}`}
                     alt="cover"
                     className="z-10 absolute bottom-0"
                   />

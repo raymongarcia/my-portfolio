@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const Banner = () => {
     return (
         <section id="Home" className="hero">
@@ -22,7 +24,7 @@ const Banner = () => {
                 <figure className="hero-portrait">
                     <Image
                         className="hero-photo"
-                        src="/hero-portrait-cutout.png"
+                        src={`${basePath}/hero-portrait-cutout.png`}
                         alt="Raymon Garcia"
                         fill
                         priority
